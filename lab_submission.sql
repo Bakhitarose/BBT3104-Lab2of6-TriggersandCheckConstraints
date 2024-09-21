@@ -5,7 +5,7 @@ UPDATE
 	ON 
 	customers FOR EACH ROW 
 BEGIN 
-	DELETE FROM stomeers_data_reminders
+	DELETE FROM customer_data_reminders
 	WHERE  customer_id = OLD.customer_id;
 
 	INSERT INTO customer_data_reminders (customer_id, reminder_text, created_at)
